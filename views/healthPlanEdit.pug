@@ -1,0 +1,38 @@
+extends layout
+
+block layout-content
+  div.View.content
+    div.container-fluid
+      div.row
+        div.card
+          div.header
+            h4.title Plano de Saúde
+          div.content
+            if !plan
+              form(method='POST' action='/planos/novo-plano')
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      label Nome do plano
+                      input.form-control(type='text' placeholder='Nome do Plano' name='inputPlanName')
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      label Comentários sobre o plano
+                      textarea.form-control(rows='5' placeholder='Descrição do plano' maxlength='1000' name='inputPlanDescription')
+                input.btn.btn-info.btn-fill.pull-right(type='submit' value='Guardar informações')
+                div.clearfix
+            else
+              form(method='POST' action='/planos/' + plan.idPlano + '/editar-plano')
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      label Nome do plano
+                      input.form-control(type='text' value=plan.nome name='inputPlanName')
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      label Comentários sobre o plano
+                      textarea.form-control(rows='5' maxlength='1000' name='inputPlanDescription') #{plan.descricao}
+                input.btn.btn-info.btn-fill.pull-right(type='submit' value='Guardar informações')
+                div.clearfix

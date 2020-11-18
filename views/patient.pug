@@ -1,0 +1,49 @@
+extends layout
+
+block layout-content
+  div.View.content
+    div.container-fluid
+      div.row
+        div.card
+          div.header
+            h4.title Detalhes do Paciente
+          div.content
+            div.row
+              div.col-md-5
+                label Company (disabled)
+                h5 'Creative Code Inc.')
+              div.col-md-3
+                label Username
+                h5 'michael23')
+              div.col-md-4
+                label(for='exampleInputEmail1') Email address
+                h3
+            div.row
+              div.col-md-6
+                label First Name
+                h5 'Mike')
+              div.col-md-6
+                label Last Name
+                h5 'Andrew')
+            div.row
+              div.col-md-12
+                label Address
+                h5 'Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09')
+            div.row
+              div.col-md-4
+                label City
+                h5 'Mike')
+              div.col-md-4
+                label Country
+                h5 'Andrew')
+              div.col-md-4
+                label Postal Code
+                h5
+            div.row
+              div.col-md-12
+                label About Me
+                br
+                Lamborghini Mercy, Your chick she so thirsty, I&apos;m in that two seat Lambo.
+            form
+              button.btn.btn-info.btn-fill.pull-right(type='submit' formaction="editar-paciente") Editar Paciente
+            div.clearfix

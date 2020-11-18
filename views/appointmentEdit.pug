@@ -1,0 +1,77 @@
+extends layout
+
+block layout-content
+  div.View.content
+    div.container-fluid
+      div.row
+        div.col-md-12
+          div.card
+            div.header
+              h4.title Registrar Consulta
+            div.content
+              form
+                div.row
+                  div.col-md-8
+                    div.form-group
+                      label Paciente
+                      input.form-control(type='text' placeholder='Nome')
+                  div.col-md-4
+                    div.form-group
+                      label Plano de Sa&uacute;de
+                      select#plans.form-control(name='plans')
+                        option(value='') Selecione
+                        each plan in plans
+                          option(value='#{plan.idPlano}') #{plan.nome}
+                div.row
+                  div.col-md-6
+                    div.form-group
+                      label Tipo de consulta
+                      input.form-control(type='text' placeholder='Retorno')
+                  div.col-md-6
+                    div.form-group
+                      label Consult&oacute;rio
+                      input.form-control(type='text' placeholder='Sta. Casa')
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      label Assunto
+                      textarea.form-control(rows='5' placeholder='Assuntos tratados na consulta')
+                div.row
+                  div.col-md-12
+                    h5 Demais informações
+                div.row
+                  div.col-md-1
+                  div.col-md-2
+                    div.form-group
+                      div.checkbox(onClick='smoker()')
+                          input#smoker(type='checkbox')
+                          label#smoker-label(for='smoker') Nega tabagismo
+                  div.col-md-2
+                    div.form-group
+                      div.checkbox
+                          input(type='checkbox')
+                          label(for='smoker') Fumante
+                  div.col-md-2
+                    div.form-group
+                      div.checkbox
+                          input(type='checkbox')
+                          label(for='smoker') Fumante
+                  div.col-md-2
+                    div.form-group
+                      div.checkbox
+                          input(type='checkbox')
+                          label(for='smoker') Fumante
+                  div.col-md-2
+                    div.form-group
+                      div.checkbox
+                          input(type='checkbox')
+                          label(for='smoker') Fumante
+                button.btn.btn-info.btn-fill.pull-right(type='submit') Registrar Consulta
+                div.clearfix
+                script.
+                  function smoker() {
+                    if (document.getElementById('smoker').checked)
+                      document.getElementById('smoker-label').innerText = 'Tabagista';
+                    else
+                      document.getElementById('smoker-label').innerText = 'Nega tabagismo';
+                  }

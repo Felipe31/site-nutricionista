@@ -1,0 +1,143 @@
+extends layout
+
+block layout-content
+  div.View.content
+    div.container-fluid
+      div.row
+        div.col-md-4
+          div.card
+            div.header
+              h4.title Email Statistics
+              p.category Last Campaign Performance
+            div.content
+              #chartPreferences.ct-chart.ct-perfect-fourth
+              div.footer
+                div.legend
+                  i.fa.fa-circle.text-info
+                  |  Open
+                  i.fa.fa-circle.text-danger
+                  |  Bounce
+                  i.fa.fa-circle.text-warning
+                  |  Unsubscribe
+                hr
+                div.stats
+                  i.fa.fa-clock-o
+                  |  Campaign sent 2 days ago
+        div.col-md-8
+          div.card
+            div.header
+              h4.title Users Behavior
+              p.category 24 Hours performance
+            div.content
+              #chartHours.ct-chart
+              div.footer
+                div.legend
+                  i.fa.fa-circle.text-info
+                  |  Open
+                  i.fa.fa-circle.text-danger
+                  |  Click
+                  i.fa.fa-circle.text-warning
+                  |  Click Second Time
+                hr
+                div.stats
+                  i.fa.fa-history
+                  |  Updated 3 minutes ago
+      div.row
+        div.col-md-6
+          div.card
+            div.header
+              h4.title 2014 Sales
+              p.category All products including Taxes
+            div.content
+              #chartActivity.ct-chart
+              div.footer
+                div.legend
+                  i.fa.fa-circle.text-info
+                  |  Tesla Model S
+                  i.fa.fa-circle.text-danger
+                  |  BMW 5 Series
+                hr
+                div.stats
+                  i.fa.fa-check
+                  |  Data information certified
+        div.col-md-6
+          div.card
+            div.header
+              h4.title Tasks
+              p.category Backend development
+            div.content
+              div.table-full-width
+                table.table
+                  tbody
+                    tr
+                      td
+                        div.checkbox
+                          input#checkbox1(type='checkbox')
+                          label(for='checkbox1')
+                      td Sign contract for &quot;What are conference organizers afraid of?&quot;
+                      td.td-actions.text-right
+                        button.btn.btn-info.btn-simple.btn-xs(type='button' rel='tooltip' title='Edit Task')
+                          i.fa.fa-edit
+                        button.btn.btn-danger.btn-simple.btn-xs(type='button' rel='tooltip' title='Remove')
+                          i.fa.fa-times
+                    tr
+                      td
+                        div.checkbox
+                          input#checkbox2(type='checkbox' checked='')
+                          label(for='checkbox2')
+                      td Lines From Great Russian Literature? Or E-mails From My Boss?
+                      td.td-actions.text-right
+                        button.btn.btn-info.btn-simple.btn-xs(type='button' rel='tooltip' title='Edit Task')
+                          i.fa.fa-edit
+                        button.btn.btn-danger.btn-simple.btn-xs(type='button' rel='tooltip' title='Remove')
+                          i.fa.fa-times
+                    tr
+                      td
+                        div.checkbox
+                          input#checkbox3(type='checkbox')
+                          label(for='checkbox3')
+                      td
+                        | Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                      td.td-actions.text-right
+                        button.btn.btn-info.btn-simple.btn-xs(type='button' rel='tooltip' title='Edit Task')
+                          i.fa.fa-edit
+                        button.btn.btn-danger.btn-simple.btn-xs(type='button' rel='tooltip' title='Remove')
+                          i.fa.fa-times
+                    tr
+                      td
+                        div.checkbox
+                          input#checkbox4(type='checkbox' checked='')
+                          label(for='checkbox4')
+                      td Create 4 Invisible User Experiences you Never Knew About
+                      td.td-actions.text-right
+                        button.btn.btn-info.btn-simple.btn-xs(type='button' rel='tooltip' title='Edit Task')
+                          i.fa.fa-edit
+                        button.btn.btn-danger.btn-simple.btn-xs(type='button' rel='tooltip' title='Remove')
+                          i.fa.fa-times
+                    tr
+                      td
+                        div.checkbox
+                          input#checkbox5(type='checkbox')
+                          label(for='checkbox5')
+                      td Read &quot;Following makes Medium better&quot;
+                      td.td-actions.text-right
+                        button.btn.btn-info.btn-simple.btn-xs(type='button' rel='tooltip' title='Edit Task')
+                          i.fa.fa-edit
+                        button.btn.btn-danger.btn-simple.btn-xs(type='button' rel='tooltip' title='Remove')
+                          i.fa.fa-times
+                    tr
+                      td
+                        div.checkbox
+                          input#checkbox6(type='checkbox' checked='')
+                          label(for='checkbox6')
+                      td Unfollow 5 enemies from twitter
+                      td.td-actions.text-right
+                        button.btn.btn-info.btn-simple.btn-xs(type='button' rel='tooltip' title='Edit Task')
+                          i.fa.fa-edit
+                        button.btn.btn-danger.btn-simple.btn-xs(type='button' rel='tooltip' title='Remove')
+                          i.fa.fa-times
+              div.footer
+                hr
+                div.stats
+                  i.fa.fa-history
+                  |  Updated 3 minutes ago

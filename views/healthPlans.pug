@@ -1,0 +1,26 @@
+extends layout
+
+block layout-content
+  div.View.content
+    div.container-fluid
+      div.row
+        div.col-md-12
+          div.card
+            div.header
+              h4.title Lista de Planos de Saúde
+            div.content.table-responsive.table-full-width
+              table.table.table-hover
+                thead
+                  th ID
+                  th Plano
+                  th Comentários
+                  th
+                tbody
+                  each plan in plans
+                    tr(onClick="window.location='/planos/" + plan.idPlano + "';" type='button')
+                      td #{plan.idPlano}
+                      td #{plan.nome}
+                      td #{plan.descricao}
+                      td
+                        a.btn.btn-info.btn-simple.btn-xs(href='/planos/' + plan.idPlano + '/editar-plano' type='button')
+                          i.fa.fa-edit

@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+  div.View.content
+    div.container-fluid
+      div.row
+        div.card
+          div.header
+            h4.title Plano de Saúde
+          div.content
+            if plan
+              div.row
+                div.col-md-12
+                  label Nome do plano
+                  p(type='text' value=plan.nome name='inputPlanName') #{plan.nome}
+              div.row
+                div.col-md-12
+                  label Comentários sobre o plano
+                  p(rows='5' maxlength='1000' name='inputPlanDescription') #{plan.descricao}
+              form(action='/planos/' + plan.idPlano + '/editar-plano')
+                input.btn.btn-info.btn-fill.pull-right(type='submit' value='Editar plano')
+              div.clearfix
