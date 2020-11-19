@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const cookie = require('cookie');
-
+require('dotenv').config();
 
 const authUser = (req, res, next) => {
   var cookies = cookie.parse(req.headers.cookie || '');

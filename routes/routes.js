@@ -9,6 +9,7 @@ const appointmentRoute = require('./appointment');
 const patientRoute = require('./patient');
 const healthPlanRoute = require('./healthPlan');
 const noteRoute = require('./note');
+require('dotenv').config();
 
 const createUserToken = (userId) => {
   return jwt.sign({ id: userId }, process.env.JWT_PASS, process.env.JWT_OPTIONS );

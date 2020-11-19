@@ -1,5 +1,6 @@
 const connection = require('./connection');
 const bcrypt = require('bcrypt');
+require('dotenv').config();
 
 const addUser = (name, email, password, isAdm) => {
   console.log(name);
