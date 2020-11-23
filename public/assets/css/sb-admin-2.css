@@ -11599,19 +11599,19 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("../img/frutas1.jpg");
+  background: url("../img/background/frutas1.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("../img/frutas2.jpg");
+  background: url("../img/background/frutas2.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url("../img/frutas3.jpg");
+  background: url("../img/background/frutas3.jpg");
   background-position: center;
   background-size: cover;
 }
