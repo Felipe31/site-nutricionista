@@ -10,7 +10,7 @@ routes.get("/", auth.user, (req, res) => {
 });
 
 routes.get("/novoPlano", auth.user, (req, res) => {
-  res.render("healthPlanEdit", { idPage: 9,  title: "Novo Paciente"});
+  res.render("healthPlanEdit", { idPage: 9,  title: "Planos de saúde"});
 });
 
 routes.post("/novoPlano", auth.user, (req, res) => {

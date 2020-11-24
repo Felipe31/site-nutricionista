@@ -6,53 +6,53 @@ block layout-content
       div.row
         div.card
           div.header
-            h4.title Edit Profile
+            h4.title Registrar Paciente
           div.content
             form
               div.row
+                div.col-md-1
+                  div.form-group
+                    label(for='id') Código
+                    p.form-control(id='id') 123
+                div.col-md-6
+                  div.form-group
+                    label(for='email') Nome completo
+                    input.form-control(type='text' placeholder='Maria da Silva' value='' id='fullName')
                 div.col-md-5
                   div.form-group
-                    label Company (disabled)
-                    input.form-control(type='text' disabled='' placeholder='Company' value='Creative Code Inc.')
-                div.col-md-3
-                  div.form-group
-                    label Username
-                    input.form-control(type='text' placeholder='Username' value='michael23')
-                div.col-md-4
-                  div.form-group
-                    label(for='exampleInputEmail1') Email address
-                    input.form-control(type='email' placeholder='Email')
+                    label(for='email') Endereço de Email
+                    input.form-control(type='email' placeholder='maria@silva.com' id='email')
               div.row
                 div.col-md-6
                   div.form-group
-                    label First Name
-                    input.form-control(type='text' placeholder='Company' value='Mike')
+                    label(for='birth') Data de Nascimento
+                    input.form-control(type='date' placeholder='02/07/1987' value='' id='birth')
                 div.col-md-6
                   div.form-group
-                    label Last Name
+                    label Profissão
                     input.form-control(type='text' placeholder='Last Name' value='Andrew')
               div.row
                 div.col-md-12
                   div.form-group
-                    label Address
-                    input.form-control(type='text' placeholder='Home Address' value='Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09')
+                    label Planos
+                    //-  TODO: load a list of existing health plans as a checklist
               div.row
                 div.col-md-4
                   div.form-group
-                    label City
+                    label Mora com
                     input.form-control(type='text' placeholder='City' value='Mike')
                 div.col-md-4
                   div.form-group
-                    label Country
+                    label Gênero
                     input.form-control(type='text' placeholder='Country' value='Andrew')
                 div.col-md-4
                   div.form-group
-                    label Postal Code
+                    label Cidade
                     input.form-control(type='number' placeholder='ZIP Code')
               div.row
                 div.col-md-12
                   div.form-group
-                    label About Me
+                    label Observações
                     textarea.form-control(rows='5' placeholder='Here can be your description' value='Mike') Lamborghini Mercy, Your chick she so thirsty, I&apos;m in that two seat Lambo.
               button.btn.btn-info.btn-fill.pull-right(type='submit') Update Profile
               div.clearfix

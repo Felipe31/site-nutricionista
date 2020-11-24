@@ -11,7 +11,7 @@ routes.get("/paciente", auth.user, (req, res) => {
 });
 
 routes.get("/novoPaciente", auth.user, (req, res) => {
-  res.render("patientEdit", { idPage: 4,  title: "Novo Paciente"});
+  res.render("patientEdit", { idPage: 4,  title: "Pacientes"});
 });
 
 routes.get("/editarPaciente", auth.user, (req, res) => {
