@@ -43,10 +43,35 @@ CREATE TABLE PacientePlano (
   fk_paciente INTEGER
 );
 
+--@TODO: Rever os tipos dos dados dessa coluna
 CREATE TABLE Consulta (
   id_consulta INTEGER PRIMARY KEY UNIQUE AUTO_INCREMENT,
   peso FLOAT,
   altura FLOAT,
+  percentual_gordura FLOAT,
+  percentual_massa_magra FLOAT,
+  tmb FLOAT,
+  idade_metabolica FLOAT,
+  gordura_visceral FLOAT,
+  circunferencia_cervical FLOAT,
+  circunferencia_cintura FLOAT,
+  circunferencia_abdominal FLOAT,
+  circunferencia_quadril FLOAT,
+  vet FLOAT,
+  ptn FLOAT,
+  necessidade_hidrica FLOAT,
+  classificacao FLOAT,
+  peso_meta FLOAT,
+  medicamento VARCHAR(100),
+  tecnica_cirurgica VARCHAR(100),
+  outras_cirurgias VARCHAR(100),
+  atividade_fisica VARCHAR(100),
+  frequencia_atividade_fisica VARCHAR(100),
+  tipo_atividade_fisica VARCHAR(100),
+  horario_atividade_fisica VARCHAR(100),
+  funcionamento_intestino VARCHAR(100),
+  distensao_abdominal VARCHAR(100),
+  escala_bristol VARCHAR(100),
   fk_consultorio INTEGER
 );
 
