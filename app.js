@@ -35,7 +35,7 @@ httpServer.listen(process.env.HTTP_PORT, () => {
   console.log(`Listening on port ${process.env.HTTP_PORT} using HTTP`);
 });
 httpsServer.listen(process.env.HTTPS_PORT, () => {
-  console.log(`Listening on port ${process.env.HTTP_PORT} using HTTPS`);
+  console.log(`Listening on port ${process.env.HTTPS_PORT} using HTTPS`);
 });
 
 module.exports = app;
