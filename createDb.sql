@@ -72,7 +72,9 @@ CREATE TABLE Consulta (
   funcionamento_intestino VARCHAR(100),
   distensao_abdominal VARCHAR(100),
   escala_bristol VARCHAR(100),
-  fk_consultorio INTEGER
+  fk_consultorio INTEGER,
+  fk_plano INTEGER,
+  fk_paciente INTEGER
 );
 
 CREATE TABLE Consultorio (
@@ -116,10 +118,18 @@ ALTER TABLE PacientePlano ADD CONSTRAINT FK_PacientePlano_2
   FOREIGN KEY (fk_paciente)
   REFERENCES Paciente (id_paciente);
 
-ALTER TABLE Consulta ADD CONSTRAINT FK_Consulta_2
+ALTER TABLE Consulta ADD CONSTRAINT FK_Consulta_1
   FOREIGN KEY (fk_consultorio)
   REFERENCES Consultorio (id_consultorio)
   ON DELETE CASCADE;
+
+ALTER TABLE Consulta ADD CONSTRAINT FK_Consulta_2
+  FOREIGN KEY (fk_plano)
+  REFERENCES Plano (id_plano);
+
+ALTER TABLE Consulta ADD CONSTRAINT FK_Consulta_3
+  FOREIGN KEY (fk_paciente)
+  REFERENCES Paciente (id_paciente);
 
 ALTER TABLE Exame ADD CONSTRAINT FK_Exame_2
   FOREIGN KEY (fk_consulta)
