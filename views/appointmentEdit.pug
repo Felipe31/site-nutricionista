@@ -20,22 +20,156 @@ block layout-content
                       label Plano de Sa&uacute;de
                       select#plans.form-control(name='plans')
                         option(value='') Selecione
-                        each plan in plans
-                          option(value='#{plan.idPlano}') #{plan.nome}
+                        //- each plan in plans
+                        //-   option(value='#{plan.idPlano}') #{plan.nome}
                 div.row
                   div.col-md-6
                     div.form-group
-                      label Tipo de consulta
-                      input.form-control(type='text' placeholder='Retorno')
+                      label Tipo de consulta [PARA QUE ESSE CAMPO?]
+                      input.form-control(type='text' placeholder='Ex.: Retorno')
                   div.col-md-6
                     div.form-group
                       label Consult&oacute;rio
-                      input.form-control(type='text' placeholder='Sta. Casa')
+                      input.form-control(type='text' placeholder='Ex.: Sta. Casa')
+                div.row
+                  div.col-md-2
+                    div.form-group
+                      label Peso
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' onchange='calculateIMC()' required)
+                  div.col-md-2
+                    div.form-group
+                      label Altura
+                      input.form-control#height(type='text' placeholder='Ex.: 0.00' onchange='calculateIMC()' required)
+                  div.col-md-2
+                    div.form-group
+                      label IMC
+                      input.form-control#imc(type='text' tabindex="-1" readonly)
+                  div.col-md-2
+                    div.form-group
+                      label Percentual de gordura
+                      input.form-control#fatPercentage(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Percentual de massa magra
+                      input.form-control#leanMassPercentage(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label TMB
+                      input.form-control#bmi(type='text' placeholder='Ex.: 00' required)
+                div.row
+                  div.col-md-2
+                    div.form-group
+                      label Idade metabolica
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Gordura visceral
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Circunferência cervical
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Circunferência da cintural
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Circunferência abdominal
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Circunferência do quadril
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                div.row
+                  div.col-md-2
+                    div.form-group
+                      label Relação cintura-quadril
+                      input.form-control#imc(type='text' tabindex="-1" readonly)
+                  div.col-md-3
+                    div.form-group
+                      label Resultado percentual de gordura
+                      input.form-control#imc(type='text' tabindex="-1" readonly)
+                  div.col-md-3
+                    div.form-group
+                      label Resultado percentual de músculo
+                      input.form-control#imc(type='text' tabindex="-1" readonly)
+                  div.col-md-2
+                    div.form-group
+                      label VET - Valor energético total
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label PTN - Proteína
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                div.row
+                  div.col-md-3
+                    div.form-group
+                      label Necessidade hídrica (litros)
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Classificação
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Menor peso pelo IMC
+                      input.form-control#imc(type='text' tabindex="-1" readonly)
+                  div.col-md-2
+                    div.form-group
+                      label Maior peso pelo IMC
+                      input.form-control#imc(type='text' tabindex="-1" readonly)
+                  div.col-md-3
+                    div.form-group
+                      label Peso Meta
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
                 div.row
                   div.col-md-12
                     div.form-group
-                      label Assunto
+                      label Medicamentos
                       textarea.form-control(rows='5' placeholder='Assuntos tratados na consulta')
+                div.row
+                  div.col-md-3
+                    div.form-group
+                      label Técnica cirúrgica (bariátrica)
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Data cirurgia bariátrica
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Outras cirurgias
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Atividade física
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-3
+                    div.form-group
+                      label Frequência da atividade física
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                div.row
+                  div.col-md-2
+                    div.form-group
+                      label Tipo da atividade física
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Horário da atividade física
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Funcionamento do intestino
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Distensão abdominal
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
+                  div.col-md-2
+                    div.form-group
+                      label Escala de Bristol
+                      input.form-control#weight(type='text' placeholder='Ex.: 00' required)
                 div.row
                   div.col-md-12
                     h5 Demais informações
@@ -74,4 +208,17 @@ block layout-content
                       document.getElementById('smoker-label').innerText = 'Tabagista';
                     else
                       document.getElementById('smoker-label').innerText = 'Nega tabagismo';
+                  }
+                  function calculateIMC() {
+                    var weight = evaluateWeight(document.getElementById('weight').value);
+                    var height = evaluateHeight(document.getElementById('height').value);
+                    if(weight && height) {
+                      document.getElementById('imc').value = "CALCULAR O IMC BASEADO NO PESO E ALTURA";
+                    }
+                  }
+                  function evaluateWeight(weight) {
+                    return (weight) ? weight : false;
+                  }
+                  function evaluateHeight(height) {
+                    return (height) ? height : false;
                   }
